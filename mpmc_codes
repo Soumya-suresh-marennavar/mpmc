@@ -89,12 +89,21 @@ displ proc
  ret
 displ endp
 end ; End of program
+
+
+
 Procedure
 Masm filename.asm
 link filename.obj
 cv filename.exe
 F5 to run the code,or F8 to run step by step
 File exit to see the result
+
+
+
+
+
+
 PROGRAM No. 2
 Simulate a Decimal Up-counter to display 00-99.
 .model small ; Use the small memory model (code and data fit in one segment)
@@ -173,10 +182,16 @@ clear proc
  ret
 clear endp
 end start ; Mark program end and entry point
+
+
 Procedure
 Masm filename.asm
 link filename.obj
 debug filename.exe
+
+
+
+
 PROGRAM No. 3
 Compute nCr using recursive procedure. Assume that ‘n’ and ‘r’ are non- negative integers.
 .model small ; Use small memory model
@@ -247,12 +262,21 @@ resn:
  ret
 ncrpro endp
 end ; End of program
+
+
+
 Procedure
 Masm filename.asm
 link filename.obj
 cv filename.exe
 F5 to run the code,or F8 to run step by step
 e ds:……. (location of ncr check in the code)
+
+
+
+
+
+
 PROGRAM No. 4
 Sort a given set of ‘n’ numbers in ascending and descending orders using the Bubble Sort
 algorithm.
@@ -286,12 +310,20 @@ next:
  mov ah, 4Ch ; Terminate program
  int 21h
 end start ; End of code, entry point is "start"
+
+
+
 Procedure
 Masm filename.asm
 link filename.obj
 cv filename.exe
 F5 to run the code,or F8 to run step by step
 e ds:……. (location of specified in mov al,a[si] check in the code)
+
+
+
+
+
 PROGRAM No. 5
 Read the current time from the system and display it in the standard format on the screen.
 .model small ; Define small memory model (1 code + 1 data segment)
@@ -346,6 +378,8 @@ disp proc near
  ret ; Return from procedure
 disp endp
 end start ; End of program; entry point is 'start'
+
+
 Procedure
 Masm filename.asm
 link filename.obj
